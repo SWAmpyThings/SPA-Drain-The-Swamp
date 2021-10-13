@@ -1,0 +1,54 @@
+.green-rewards {
+    &--icon {
+        margin-left: 15%;
+        width: 60px;
+    }
+
+    &--title-bar {
+        background-color: #E7E6E6;
+        border-bottom-color: black;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+    }
+
+    &--title {
+        margin: 1px;
+    }
+
+    &-points-section {
+        margin-top: 10px;
+    }
+
+    &-status {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    &--links {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+        margin-right: 5%;
+    }
+}
+
+
+.MuiLink-root {
+    margin-bottom: 8px !important;
+}
+
+.MuiLinearProgress-bar1Determinate {
+    background-color: #008522 !important;
+    border-radius: 20px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .green-rewards {
+        &--icon {
+            bottom: 15px;
+            margin-left: 15%;
+            position: relative;
+            width: 60px;
+        }
+    }
+}
