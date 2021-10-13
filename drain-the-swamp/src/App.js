@@ -1,4 +1,5 @@
 import GlobalDashboard from './GlobalDashboard';
+import IndividualDashboard from './IndividualDashboard/index';
 import {
     BrowserRouter as Router,
     Link,
@@ -11,8 +12,7 @@ function App() {
         <Router>
             <Switch>
                 <Route path="/individual">
-                    {/* Add dashboard component here */}
-                    <div>Individual Dashboard</div>
+                    <IndividualDashboard />
                 </Route>
                 <Route path="/global">
                     <GlobalDashboard />
