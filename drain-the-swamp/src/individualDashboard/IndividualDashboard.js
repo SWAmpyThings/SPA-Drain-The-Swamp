@@ -30,7 +30,7 @@ const IndividualDashboard = (props) => {
                             <Paper sx={{ height: 80, backgroundColor: '#304CB2', display: 'flex', alignItems: 'center'}}>
                             <Typography gutterBottom={true} variant="h4" sx={{ color: '#FFBF27', marginLeft: '2%' }}>
                             {/* Update with user that's logged in */}
-                                Hi, User!
+                                Hi, Smokey!
                             </Typography>
                             </Paper>
                         </Grid>

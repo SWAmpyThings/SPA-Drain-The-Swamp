@@ -6,7 +6,7 @@ import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import { ProgressBar, Step } from 'react-step-progress-bar';
 import Link from '@mui/material/Link';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
