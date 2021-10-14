@@ -7,7 +7,8 @@ export const styles = {
         padding: '8px 10px',
         '&:hover': {
             backgroundColor: '#FFBF27'
-        }
+        },
+        textTransform: 'none'
     }
 };
 

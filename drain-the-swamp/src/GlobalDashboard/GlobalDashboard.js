@@ -28,14 +28,16 @@ export const GlobalDashboard = props => {
                     <h1 className="global-dashboard--header">Green Rewards</h1>
                     <Typography align="right" variant="body1">
                         Every day our customers are contribuing to making Southwest
-                        Airlines a greener company, and we would like to
-                        <strong> thank you</strong>.
+                        Airlines a greener company.<strong> Thank you </strong>
+                        for protecting our environment.
                     </Typography>
                     <Typography align="right" sx={{ color: '#5E7E95', fontWeight: 'bold', marginTop: '8px' }}>
                         Together we can fly into a brighter future.
                     </Typography>
                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'end' }}>
-                    <Button onClick={handleIndividualButtonClick} sx={styles.individualButton} variant="contained">See Your Green Rewards</Button>
+                        <Button onClick={handleIndividualButtonClick} sx={styles.individualButton} variant="contained">
+                            See your Green Rewards
+                        </Button>
                     </div>
                 </Grid>
                 <Grid item sx={{ display: { xs: 'none', sm: 'block' }}} sm={3}>
@@ -51,7 +53,9 @@ export const GlobalDashboard = props => {
 
                 <Grid item xs={0} sm={3} />
                 <Grid sx={{ color: '#304CB2', marginTop: '64px' }}item xs={12} sm={6}>
-                    <Typography align="center" sx={{ fontWeight: 'bold' }} variant="h6">Earn Green Reward Points by</Typography>
+                    <Typography align="center" sx={{ fontWeight: 'bold' }} variant="h6">
+                        Earn Green Rewards Points
+                    </Typography>
                 </Grid>
                 <Grid item xs={0} sm={3} />
 
@@ -63,7 +67,9 @@ export const GlobalDashboard = props => {
 
                 <Grid item xs={0} sm={3} />
                 <Grid sx={{ color: '#304CB2', marginTop: '64px' }}item xs={12} sm={6}>
-                    <Typography align="center" sx={{ fontWeight: 'bold' }} variant="h6">Spend Green Reward Points on</Typography>
+                    <Typography align="center" sx={{ fontWeight: 'bold' }} variant="h6">
+                        Spend Green Rewards Points
+                    </Typography>
                 </Grid>
                 <Grid item xs={0} sm={3} />
 
