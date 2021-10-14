@@ -41,7 +41,7 @@ const GreenRewards = () => {
                 <Grid container>
                     <Grid item xs={12} lg={4}>
                         <Typography gutterBottom={true} variant="h5" align="center">
-                            Points Available to Spend
+                            Points Available
                         </Typography>
                         <Typography gutterBottom={true} variant="h5" align="center" sx={{ color: 'green' }}>
                             {greenPoints}
