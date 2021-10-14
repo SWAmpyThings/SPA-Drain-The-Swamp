@@ -30,7 +30,32 @@
         flex-direction: column;
         margin-right: 5%;
     }
+
+    &-progress-bar {
+        margin: 20px 5%;
+    }
+
+    &-activity-list {
+        list-style-type: none;
+    }
+
 }
+
+.indexedStep {
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    background-color: rgba(211, 211, 211, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .indexedStep.accomplished {
+    background-color: #008522;
+  }
 
 
 .MuiLink-root {
@@ -42,7 +67,7 @@
     border-radius: 20px;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
     .green-rewards {
         &--icon {
             bottom: 15px;
@@ -50,5 +75,19 @@
             position: relative;
             width: 60px;
         }
+
+        &-activity-list--item {
+            margin-left: 20%;
+    
+            &-points {
+                margin-left: 28%;
+            }
+        }
+    }
+
+    .MuiTypography-h7 {
+        bottom: 30px;
+        left: 5px;
+        position: relative;
     }
 }
