@@ -1,4 +1,5 @@
 import Activity from './Activity';
+import activityDescriptions from './ActivityDescriptions';
 import boardingPass from './boarding-pass.png';
 import Button from '@mui/material/Button';
 import carryOn from './carry-on.jpeg';
@@ -9,21 +10,26 @@ import Typography from '@mui/material/Typography';
 import './Activities.scss';
 
 const activitiesData = [{
-    activityId: 'carry-on',
-    description: 'and reducing fuel expenditures',
-    expandedDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    imageSource: carryOn,
-    title: 'Limiting Carry-on'
-}, {
-    activityId: 'boarding-pass',
-    description: 'and reducing paper usage',
+    activityId: 'boardingPass',
+    description: 'and reduce paper usage.',
+    expandedDescription: activityDescriptions.boardingPass,
     imageSource: boardingPass,
+    rewardsPoints: '+1 point',
     title: 'Boarding Electronically'
 }, {
-    activityId: 'checked-bag',
-    description: 'and reducing our carbon footprint',
+    activityId: 'checkedBag',
+    description: 'and reduce our carbon footprint.',
+    expandedDescription: activityDescriptions.checkedBag,
     imageSource: checkedBag,
-    title: 'Limiting Checked Bags'
+    rewardsPoints: '+10 points',
+    title: 'Limit Checked Bags'
+}, {
+    activityId: 'greenIdea',
+    description: 'and help us improve.',
+    expandedDescription: activityDescriptions.greenIdea,
+    imageSource: carryOn,
+    rewardsPoints: '+2 points',
+    title: 'Submit a Green Idea'
 }];
 
 export const Activities = props => {
@@ -69,7 +75,7 @@ export const Activities = props => {
                     </div>
                     <div className="activities--expanded-description--rules">
                         <Typography sx={{ color: '#008522', textAlign: 'right' }} variant="h4">
-                            +50pts
+                            {expandedActivity?.rewardsPoints}
                         </Typography>
                     </div>
                 </div>
