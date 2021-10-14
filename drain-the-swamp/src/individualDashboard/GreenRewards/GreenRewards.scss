@@ -1,0 +1,88 @@
+.green-rewards {
+    &--icon {
+        margin-left: 15%;
+        width: 60px;
+    }
+
+    &--title-bar {
+        background-color: #E7E6E6;
+        border-bottom-color: black;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+    }
+
+    &--title {
+        margin: 1px;
+    }
+
+    &-points-section {
+        margin-top: 10px;
+    }
+
+    &-status {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    &--links {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+        margin-right: 5%;
+    }
+
+    &-progress-bar {
+        margin: 20px 5%;
+    }
+
+    &-activity-list {
+        list-style-type: none;
+    }
+
+}
+
+.MuiLink-root {
+    margin-bottom: 8px !important;
+}
+
+.indexedStep {
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    background-color: rgba(211, 211, 211, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indexedStep.accomplished {
+    background-color: #008522;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .green-rewards {
+        &--icon {
+            bottom: 15px;
+            margin-left: 15%;
+            position: relative;
+            width: 60px;
+        }
+
+        &-activity-list--item {
+            margin-left: 20%;
+    
+            &-points {
+                margin-left: 28%;
+            }
+        }
+    }
+
+    .MuiTypography-h7 {
+        bottom: 30px;
+        left: 5px;
+        position: relative;
+    }
+}
