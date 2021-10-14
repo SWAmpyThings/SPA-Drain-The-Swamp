@@ -16,7 +16,7 @@
     }
 
     &-points-section {
-        margin-top: 10px;
+        margin-top: 16px;
     }
 
     &-status {
@@ -37,6 +37,8 @@
 
     &-activity-list {
         list-style-type: none;
+        padding-left: 0;
+        text-align: center;
     }
 
 }
@@ -71,11 +73,16 @@
             width: 60px;
         }
 
-        &-activity-list--item {
-            margin-left: 20%;
+        &-activity-list {
+            text-align: unset;
+
+            &--item {
+                margin-left: 11%;
     
-            &-points {
-                margin-left: 28%;
+                &-points {
+                    padding-right: 37%;
+                    text-align: right;
+                }
             }
         }
     }

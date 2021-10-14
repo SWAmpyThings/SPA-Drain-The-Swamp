@@ -21,23 +21,42 @@ const GreenRewards = () => {
                 <Typography 
                     variant="h4"
                     align="left"
-                    sx={{ fontWeight: 'bold', width: '100%', padding: '5px' }}>
-                        Green Rewards
+                    sx={{ fontWeight: 'bold', width: '100%', padding: '10px' }}>
+                        My Green Rewards
                 </Typography>
             </div>
             <div className="green-rewards-points-section">
                 <Grid container>
-                    <Grid item xs={12} lg={4}>
-                        <Typography gutterBottom={true} variant="h5" align="center">
+                    <Grid item 
+                        xs={12} lg={4} 
+                        sx={{ 
+                            paddingLeft: {
+                                xs: '30%',
+                                sm: '38%',
+                                md: '40%',
+                                lg: '3.5%'
+                            }
+                        }}>
+                        <Typography gutterBottom={true} variant="h5" >
                             Points Available
                         </Typography>
-                        <Typography gutterBottom={true} variant="h5" align="center" sx={{ color: 'green' }}>
+                        <Typography gutterBottom={true} variant="h5"  
+                            sx={{ 
+                                color: 'green', 
+                                paddingLeft: {
+                                    xs: '22%',
+                                    sm: '22%',
+                                    md: '14%',
+                                    lg: '25%',
+                                    xl: '25%'
+                                } 
+                            }}>
                             {greenPoints.totalGreenRewardPointsAvailable}
                         </Typography>
                     </Grid>
                     <Grid item xs={12} lg={4}>
                         <Typography gutterBottom={true} variant="h5" align="center">
-                            Points All of 2021
+                            2021 Points
                         </Typography>
                         <Typography gutterBottom={true} variant="h5" align="center" sx={{ color: 'green' }}>
                             {greenPoints.totalGreenRewardPointsEarned}
@@ -45,7 +64,7 @@ const GreenRewards = () => {
                     </Grid>
                     <Grid item xs={12} lg={4}>
                         <Typography gutterBottom={true} variant="h5" align="center">
-                            Lifetime points
+                            Lifetime Points
                         </Typography>
                         <Typography gutterBottom={true} variant="h5" align="center" sx={{ color: 'green' }}>
                             {greenPoints.totalLifetimePoints}
@@ -55,18 +74,18 @@ const GreenRewards = () => {
             </div>
             <div>
                 {/* Update progress bar with updated values and tooltips */}
-                <Typography variant="h5" align="center">
+                <Typography variant="h5" sx={{ fontStyle: 'italic', paddingLeft: '3.5%' }}>
                     Here is how you are helping the environment this year
                 </Typography>
                 <div className="green-rewards-progress-bar">
                     <ProgressBar
-                        percent={67}
+                        percent={(greenPoints.totalGreenRewardPointsEarned/100)*100}
                         filledBackground="#008522"
                     >
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 1">
+                                <Tooltip title="Badge 1" arrow>
                                     <span>1</span>
                                 </Tooltip>
                             </div>
@@ -75,7 +94,7 @@ const GreenRewards = () => {
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 2">
+                                <Tooltip title="Badge 2" arrow>
                                     <span>2</span>
                                 </Tooltip>
                             </div>
@@ -84,7 +103,7 @@ const GreenRewards = () => {
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 5">
+                                <Tooltip title="Badge 5" arrow>
                                     <span>5</span>
                                 </Tooltip>
                             </div>
@@ -93,7 +112,7 @@ const GreenRewards = () => {
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 10">
+                                <Tooltip title="Badge 10" arrow>
                                     <span>10</span>
                                 </Tooltip>
                             </div>
@@ -102,7 +121,7 @@ const GreenRewards = () => {
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 100">
+                                <Tooltip title="Badge 100" arrow>
                                     <span>100</span>
                                 </Tooltip>
                             </div>
@@ -111,7 +130,7 @@ const GreenRewards = () => {
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 500">
+                                <Tooltip title="Badge 500" arrow>
                                     <span>500</span>
                                 </Tooltip>
                             </div>
@@ -126,12 +145,12 @@ const GreenRewards = () => {
             </div>
             <Divider />
             <Box>
-                <Typography gutterBottom={true} variant="h5" sx={{ margin: '10px' }}>
+                <Typography gutterBottom={true} variant="h5" sx={{ margin: '10px 3.5%' }}>
                     Green Rewards Activity
                 </Typography>
                 <Grid container>
                     <Grid item xs={4} lg={4}>
-                        <Typography gutterBottom={true} variant="h5" align="center">Date</Typography>
+                        <Typography gutterBottom={true} variant="h6" sx={{ paddingLeft: '11%' }}>DATE</Typography>
                         <ul className="green-rewards-activity-list">
                             {sortedActivities.slice(0, 4).map((activity, index) => {
                                 const date = new Date(activity.activityDate);
@@ -145,7 +164,7 @@ const GreenRewards = () => {
                         </ul>
                     </Grid>
                     <Grid item xs={4} lg={4}>
-                        <Typography gutterBottom={true} variant="h5" align="center">Description</Typography>
+                        <Typography gutterBottom={true} variant="h6">DESCRIPTION</Typography>
                         <ul className="green-rewards-activity-list">
                             {sortedActivities.slice(0, 4).map((activity, index) => (
                                 <li key={index}>
@@ -157,7 +176,7 @@ const GreenRewards = () => {
                         </ul>
                     </Grid>
                     <Grid item xs={4} lg={4}>
-                        <Typography gutterBottom={true} variant="h5" align="center">Points</Typography>
+                        <Typography gutterBottom={true} variant="h6" align="center">POINTS</Typography>
                         <ul className="green-rewards-activity-list">
                             {sortedActivities.slice(0, 4).map((activity, index) => (
                                 <li className="green-rewards-activity-list--item-points" key={index}>
@@ -170,6 +189,7 @@ const GreenRewards = () => {
                     </Grid>
                     <Link underline="hover" href="#" sx={{ marginLeft: '80%' }}>Activity Page ></Link>
                 </Grid>
+                <Divider />
             </Box>
         </Box>
     );
