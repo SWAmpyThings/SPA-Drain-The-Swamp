@@ -2,7 +2,7 @@ import Activities from './Activities';
 import Button from '@mui/material/Button';
 import Console from './Console';
 import Grid from '@mui/material/Grid';
-import React from 'react';
+import { Suspense } from 'react';
 import Rewards from './Rewards';
 import SouthwestHeader from '../shared/SouthwestHeader';
 import Splash from './Splash';
@@ -48,7 +48,9 @@ export const GlobalDashboard = props => {
 
                 <Grid item xs={12}>
                     <div style={{ backgroundColor: '#f5f5f5', marginLeft: '-16px', paddingLeft: '16px', width: 'calc(100% + 32px)' }}>
-                        <Console />
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Console />
+                        </Suspense>
                     </div>
                 </Grid>
 
