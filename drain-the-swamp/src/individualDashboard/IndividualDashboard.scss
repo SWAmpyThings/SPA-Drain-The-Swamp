@@ -41,6 +41,13 @@
 
 }
 
+.individual-dashboard {
+    &--container {
+        background-color: #1A2C80;
+        padding-bottom: 60px;
+    }
+}
+
 .indexedStep {
     color: white;
     width: 20px;
@@ -62,10 +69,6 @@
     margin-bottom: 8px !important;
 }
 
-.MuiLinearProgress-bar1Determinate {
-    background-color: #008522 !important;
-    border-radius: 20px;
-}
 
 @media only screen and (min-width: 1024px) {
     .green-rewards {
