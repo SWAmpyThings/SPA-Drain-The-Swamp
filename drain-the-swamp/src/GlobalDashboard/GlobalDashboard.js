@@ -3,11 +3,12 @@ import Button from '@mui/material/Button';
 import Console from './Console';
 import Grid from '@mui/material/Grid';
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import Rewards from './Rewards';
 import SouthwestHeader from '../shared/SouthwestHeader';
 import Splash from './Splash';
 import styles from './styles';
 import Typography from '@mui/material/Typography';
+import { useHistory } from 'react-router-dom';
 
 import './GlobalDashboard.scss';
 
@@ -28,7 +29,7 @@ export const GlobalDashboard = props => {
                     <h1 className="global-dashboard--header">Green Rewards</h1>
                     <Typography align="right" variant="body1">
                         Every day our customers are contribuing to making Southwest
-                        Airlines a greener company.<strong> Thank you </strong>
+                        Airlines<sup>®</sup> a greener company.<strong> Thank you </strong>
                         for protecting our environment.
                     </Typography>
                     <Typography align="right" sx={{ color: '#5E7E95', fontWeight: 'bold', marginTop: '8px' }}>
@@ -75,7 +76,7 @@ export const GlobalDashboard = props => {
 
                 <Grid item xs={0} sm={3} />
                 <Grid item xs={12} sm={6}>
-                    <Activities />
+                    <Rewards />
                 </Grid>
                 <Grid item xs={0} sm={3} />
             </Grid>
