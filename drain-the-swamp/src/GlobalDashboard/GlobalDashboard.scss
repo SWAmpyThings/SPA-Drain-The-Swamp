@@ -1,4 +1,8 @@
 .global-dashboard {
+    @media (max-width: 600px) {
+        margin: 16px;
+    }
+
     &--header {
         color: #008522;
         font-weight: 600;

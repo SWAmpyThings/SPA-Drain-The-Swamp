@@ -22,19 +22,25 @@ export const Activity = props => {
 
     return (
         <div className="activity">
-            <Card sx={{ maxHeight: '100%' }} variant='outlined'>
-                <img {...getImageProps()} />
-                <CardContent>
-                    <Typography sx={{fontWeight: 'bold' }} variant="subtitle1">
-                        {props.title}
-                    </Typography>
-                    <Typography variant="caption">
-                        {props.description}
-                    </Typography>
-                </CardContent>
-                <CardActions sx={{ justifyContent: 'center' }}>
-                    <Button onClick={handleExpandClick} sx={{ color: '#304CB2' }}>Learn More</Button>
-                </CardActions>
+            <Card sx={{ height: '100%' }} variant='outlined'>
+                <div className="activity--top-container">
+                    <div className="activity--media-container">
+                        <img {...getImageProps()} />
+                    </div>
+                    <div className="activity--media-container">
+                        <CardContent sx={{ paddingBottom: { xs: '0', sm: '16px' }}}>
+                            <Typography sx={{fontWeight: 'bold' }} variant="subtitle1">
+                                {props.title}
+                            </Typography>
+                            <Typography variant="caption">
+                                {props.description}
+                            </Typography>
+                        </CardContent>
+                        <CardActions sx={{ justifyContent: 'center' }}>
+                            <Button onClick={handleExpandClick} sx={{ color: '#304CB2' }}>Learn More</Button>
+                        </CardActions>
+                    </div>
+                </div>
             </Card>
         </div>
     );

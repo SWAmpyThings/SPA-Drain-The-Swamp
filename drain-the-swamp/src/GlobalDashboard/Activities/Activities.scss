@@ -1,15 +1,15 @@
 .activities {
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     list-style-type: none;
     margin: 0;
     padding: 0;
     position: relative;
 
-    @media (max-device-width: 600px) {
-        flex-direction: column;
+    @media (min-width: 600px) {
+        flex-direction: row;
     }
 
     &--item {

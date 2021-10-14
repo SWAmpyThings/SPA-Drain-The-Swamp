@@ -7,8 +7,8 @@ import React from 'react';
 
 export const Console = props => {
     return (
-        <Grid container sx={{ paddingTop: '16px' }} spacing={2}>
-            <Grid item xs={0} sm={3} />
+        <Grid container sx={{ paddingTop: { xs: '0', sm: '16px' }}} spacing={2}>
+            <Grid item sx={{ display: { xs: 'none', sm: 'block' }}} xs={0} sm={3} />
             <Grid item xs={12} sm={2}>
                 <ConsoleItem
                     description="saved through paperless boarding"
