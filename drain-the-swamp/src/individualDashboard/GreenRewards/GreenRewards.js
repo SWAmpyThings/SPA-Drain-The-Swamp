@@ -2,19 +2,29 @@ import './GreenRewards.scss';
 import 'react-step-progress-bar/styles.css';
 import { activitiesQueryState, greenPointsQueryState } from '../../atoms/QueryAtom';
 import Box from '@mui/material/Box';
+import Boulder from './Boulder.svg';
+import Cascade from './Cascade.svg';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import { ProgressBar, Step } from 'react-step-progress-bar';
 import Link from '@mui/material/Link';
 import { useRecoilValue } from 'recoil';
+import Rainbow from './Rainbow.svg';
+import Soul from './Soulsvg.svg';
+import Thunder from './Thunder.svg';
+import Volcano from './Volcano.svg';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
+import { useHistory } from 'react-router-dom';
 
 const GreenRewards = () => {
     const greenPoints = useRecoilValue(greenPointsQueryState);
     const currentActivities = useRecoilValue(activitiesQueryState);
     const sortedActivities = [...currentActivities].sort((a, b) => b.activityDate - a.activityDate);
-
+    const history = useHistory();
+    const handleIndividualButtonClick = () => {
+        history.push('/');
+    }
     return (
         <Box sx={{ width: '100%' }}>
             <div className="green-rewards--title-bar">
@@ -79,13 +89,13 @@ const GreenRewards = () => {
                 </Typography>
                 <div className="green-rewards-progress-bar">
                     <ProgressBar
-                        percent={(greenPoints.totalGreenRewardPointsEarned/100)*100}
+                        percent={greenPoints.totalGreenRewardPointsEarned}
                         filledBackground="#008522"
                     >
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 1" arrow>
+                                <Tooltip title={<img className={`indexedStep ${accomplished ? "accomplished" : null}`} src={Boulder} />} arrow>
                                     <span>1</span>
                                 </Tooltip>
                             </div>
@@ -94,7 +104,7 @@ const GreenRewards = () => {
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 2" arrow>
+                                <Tooltip title={<img className={`indexedStep ${accomplished ? "accomplished" : null}`} src={Cascade} />} arrow>
                                     <span>2</span>
                                 </Tooltip>
                             </div>
@@ -103,7 +113,7 @@ const GreenRewards = () => {
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 5" arrow>
+                                <Tooltip title={<img className={`indexedStep ${accomplished ? "accomplished" : null}`} src={Rainbow} />} arrow>
                                     <span>5</span>
                                 </Tooltip>
                             </div>
@@ -112,7 +122,7 @@ const GreenRewards = () => {
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 10" arrow>
+                                <Tooltip title={<img className={`indexedStep ${accomplished ? "accomplished" : null}`} src={Volcano} />} arrow>
                                     <span>10</span>
                                 </Tooltip>
                             </div>
@@ -121,7 +131,7 @@ const GreenRewards = () => {
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 100" arrow>
+                                <Tooltip title={<img className={`indexedStep ${accomplished ? "accomplished" : null}`} src={Thunder} />} arrow>
                                     <span>100</span>
                                 </Tooltip>
                             </div>
@@ -130,7 +140,7 @@ const GreenRewards = () => {
                         <Step>
                             {({ accomplished, index }) => (
                             <div className={`indexedStep ${accomplished ? "accomplished" : null}`}>
-                                <Tooltip title="Badge 500" arrow>
+                                <Tooltip title={<img className={`indexedStep ${accomplished ? "accomplished" : null}`} src={Soul} />} arrow>
                                     <span>500</span>
                                 </Tooltip>
                             </div>
@@ -141,7 +151,9 @@ const GreenRewards = () => {
             </div>
             <div className="green-rewards--links">
                 <Link className="green-rewards-link" underline="hover" href="#">Spend your Points ></Link>
-                <Link underline="hover" href="#">Learn more about Green Rewards ></Link>
+                <Link underline="hover" onClick={handleIndividualButtonClick} sx={{ cursor: 'pointer' }}>
+                    Learn more about Green Rewards >
+                </Link>
             </div>
             <Divider />
             <Box>
