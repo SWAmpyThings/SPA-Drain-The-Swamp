@@ -28,11 +28,25 @@ const IndividualDashboard = (props) => {
                 <Box sx={{ flexGrow: 1, margin: '0 5% 10%' }}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} lg={12}>
-                            <Paper sx={{ height: 80, backgroundColor: '#304CB2', display: 'flex', alignItems: 'center'}}>
-                            <Typography gutterBottom={true} variant="h4" sx={{ color: '#FFBF27', marginLeft: '2%' }}>
-                            {/* Update with user that's logged in */}
-                                Hi, Smokey!
-                            </Typography>
+                            <Paper 
+                                sx={{ 
+                                    height: 100, 
+                                    backgroundColor: '#304CB2',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'flex-start',
+                                    justifyContent: 'center'
+                                }}
+                            >
+                                
+                                <Typography variant="h4" sx={{ color: '#FFBF27', marginLeft: '2%' }}>
+                                {/* Update with user that's logged in */}
+                                    Hi, Smokey!
+                                </Typography>
+                                <Typography variant="h6" sx={{ color: '#FFFFFF', marginLeft: '2%'}}>
+                                    Rapid Rewards #701968280
+                                </Typography>
+                                
                             </Paper>
                         </Grid>
                         <Grid item xs={12} lg={6}>
