@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import GreenRewards from './GreenRewards/index'
 import Grid from '@mui/material/Grid';
 import Header from '../shared/SouthwestHeader/index';
+import LoadingBar from '../shared/LoadingBar';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -45,7 +46,7 @@ const IndividualDashboard = (props) => {
                         </Grid>
                         <Grid item xs={12} lg={6}>
                             <Paper>
-                                <Suspense fallback={<div>Loading...</div>}> 
+                                <Suspense fallback={<LoadingBar />}> 
                                     <GreenRewards />
                                 </Suspense>
                             </Paper>
