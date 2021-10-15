@@ -10,7 +10,7 @@ import './Reward.scss';
 export const Reward = props => {
     const getImageProps = () => ({
         alt: props.imageAlt,
-        className: 'activity--image',
+        className: 'reward--image',
         src: props.imageSource
     });
 
