@@ -89,7 +89,7 @@ const GreenRewards = () => {
                 </Typography>
                 <div className="green-rewards-progress-bar">
                     <ProgressBar
-                        percent={greenPoints.totalGreenRewardPointsEarned}
+                        percent={(greenPoints.totalGreenRewardPointsEarned/90)*100}
                         filledBackground="#008522"
                     >
                         <Step>
@@ -150,8 +150,8 @@ const GreenRewards = () => {
                 </div>
             </div>
             <div className="green-rewards--links">
-                <Link className="green-rewards-link" underline="hover" href="#">Spend your Points ></Link>
-                <Link underline="hover" onClick={handleIndividualButtonClick} sx={{ cursor: 'pointer' }}>
+                <Link className="green-rewards-link" underline="hover" href="#" sx={{ fontFamily: 'arial' }}>Spend your Points ></Link>
+                <Link underline="hover" onClick={handleIndividualButtonClick} sx={{ fontFamily: 'arial', cursor: 'pointer' }}>
                     Learn more about Green Rewards >
                 </Link>
             </div>
@@ -199,7 +199,7 @@ const GreenRewards = () => {
                             ))}
                         </ul>
                     </Grid>
-                    <Link underline="hover" href="#" sx={{ marginLeft: '80%' }}>Activity Page ></Link>
+                    <Link underline="hover" href="#" sx={{ fontFamily: 'arial', marginLeft: '80%' }}>Activity Page ></Link>
                 </Grid>
                 <Divider />
             </Box>
