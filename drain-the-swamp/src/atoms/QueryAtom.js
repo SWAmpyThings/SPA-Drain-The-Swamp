@@ -42,7 +42,7 @@ export const activitiesQueryState = selector({
                 acc.push({
                     activityDate: date,
                     activity: 'Approved Green Idea',
-                    points: 100 * approvedGreenIdeas
+                    points: 50 * approvedGreenIdeas
                 });
             } 
             if (checkedBags === 0) {

@@ -35,6 +35,7 @@ const GreenRewards = () => {
                         My Green Rewards
                 </Typography>
             </div>
+            
             <div className="green-rewards-points-section">
                 <Grid container>
                     <Grid item 
