@@ -29,12 +29,12 @@
         transition: opacity 0.5s ease-out;
 
         &.visibile {
-            opacity: 95%;
+            opacity: 0.95;
             visibility: visible;
         }
 
         &.hidden {
-            opacity: 0%;
+            opacity: 0;
             visibility: hidden;
         }
 
