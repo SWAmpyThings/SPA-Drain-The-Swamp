@@ -15,7 +15,7 @@ const activitiesData = [{
     expandedDescription: activityDescriptions.boardingPass,
     imageSource: boardingPass,
     rewardsPoints: '+1 point',
-    title: 'Boarding Electronically'
+    title: 'Board Electronically'
 }, {
     activityId: 'checkedBag',
     description: 'and reduce our carbon footprint.',

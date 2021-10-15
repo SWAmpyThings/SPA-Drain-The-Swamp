@@ -27,7 +27,7 @@ export const GlobalDashboard = props => {
                 <Grid sx={{ marginBottom: '64px' }} item xs={12} sm={3}>
                     <h1 className="global-dashboard--header">Green Rewards</h1>
                     <Typography align="right" variant="body1">
-                        Every day our customers are contribuing to making Southwest
+                        Every day our Customers are contribuing to making Southwest
                         Airlines<sup>®</sup> a greener company.<strong> Thank you </strong>
                         for protecting our environment.
                     </Typography>
