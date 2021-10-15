@@ -7,7 +7,7 @@ import { Suspense } from 'react';
 export const Console = props => {
 
     return (
-        <Grid container sx={{ paddingTop: { xs: '0', sm: '16px' }}} spacing={2}>
+        <Grid container sx={{ paddingTop: { xs: '0', md: '16px' }}} spacing={2}>
             <Suspense fallback={<LoadingBar />}>
                 <ConsoleItems />
             </Suspense>

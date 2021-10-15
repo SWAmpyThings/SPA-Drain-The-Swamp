@@ -1,8 +1,7 @@
 .activity {
-    height: 132px;
 
-    @media (min-width: 600px) {
-        height: 272px;
+    @media (max-width: 900px) {
+        height: 132px;
     }
 
     &--top-container {
@@ -11,7 +10,7 @@
         height: 100%;
         justify-content: space-between;
 
-        @media (max-width: 600px) {
+        @media (max-width: 900px) {
             flex-direction: row;
             height: 100%;
         }
@@ -24,7 +23,7 @@
         justify-content: space-between;
         width: 100%;
 
-        @media (max-width: 600px) {
+        @media (max-width: 900px) {
             height: 100%;
             width: 50%;
         }
@@ -34,7 +33,7 @@
         max-height: 100%;
         width: 100%;
 
-        @media (max-width: 600px) {
+        @media (max-width: 900px) {
             height: 100%;
         }
     }

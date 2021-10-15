@@ -23,8 +23,8 @@ export const GlobalDashboard = props => {
                 <Grid item xs={12}>
                     <SouthwestHeader />
                 </Grid>
-                <Grid item xs={0} sm={3} />
-                <Grid sx={{ marginBottom: '64px' }} item xs={12} sm={3}>
+                <Grid item xs={0} md={3} />
+                <Grid sx={{ marginBottom: '64px' }} item xs={12} sm={6} md={3}>
                     <h1 className="global-dashboard--header">Green Rewards</h1>
                     <Typography align="right" variant="body1">
                         Every day our Customers are contribuing to making Southwest
@@ -40,7 +40,7 @@ export const GlobalDashboard = props => {
                         </Button>
                     </div>
                 </Grid>
-                <Grid item sx={{ display: { xs: 'none', sm: 'block' }}} sm={3}>
+                <Grid item sx={{ display: { xs: 'none', sm: 'block' }}} sm={6} md={3}>
                     <Splash />
                 </Grid>
                 <Grid item xs={0} sm={3} />
@@ -51,33 +51,33 @@ export const GlobalDashboard = props => {
                     </div>
                 </Grid>
 
-                <Grid item xs={0} sm={3} />
-                <Grid sx={{ color: '#304CB2', marginTop: '64px' }}item xs={12} sm={6}>
+                <Grid item xs={0} md={3} />
+                <Grid sx={{ color: '#304CB2', marginTop: '64px' }}item xs={12} md={6}>
                     <Typography align="center" sx={{ fontWeight: 'bold' }} variant="h6">
                         Earn Green Rewards Points
                     </Typography>
                 </Grid>
-                <Grid item xs={0} sm={3} />
+                <Grid item xs={0} md={3} />
 
-                <Grid item xs={0} sm={3} />
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={0} md={3} />
+                <Grid item xs={12} md={6}>
                     <Activities />
                 </Grid>
-                <Grid item xs={0} sm={3} />
+                <Grid item xs={0} md={3} />
 
-                <Grid item xs={0} sm={3} />
-                <Grid sx={{ color: '#304CB2', marginTop: '64px' }}item xs={12} sm={6}>
+                <Grid item xs={0} md={3} />
+                <Grid sx={{ color: '#304CB2', marginTop: '64px' }}item xs={12} md={6}>
                     <Typography align="center" sx={{ fontWeight: 'bold' }} variant="h6">
                         Spend Green Rewards Points
                     </Typography>
                 </Grid>
-                <Grid item xs={0} sm={3} />
+                <Grid item xs={0} md={3} />
 
-                <Grid item xs={0} sm={3} />
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={0} md={3} />
+                <Grid item xs={12} md={6}>
                     <Rewards />
                 </Grid>
-                <Grid item xs={0} sm={3} />
+                <Grid item xs={0} md={3} />
             </Grid>
         </div>
     );
