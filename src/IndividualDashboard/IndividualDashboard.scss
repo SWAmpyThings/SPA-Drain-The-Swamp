@@ -1,0 +1,19 @@
+.individual-dashboard {
+    &--container {
+        background-color: #1A2C80;
+        padding-bottom: 60px;
+    }
+}
+
+.MuiLink-root {
+    margin-bottom: 8px !important;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .MuiTypography-h7 {
+        bottom: 30px;
+        left: 5px;
+        position: relative;
+    }
+}

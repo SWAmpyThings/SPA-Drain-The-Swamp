@@ -1,0 +1,16 @@
+.console-item {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 32px;
+
+    @media (max-width: 990px) {
+        padding-bottom: 0;
+    }
+
+    &--text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,12 @@
+.global-dashboard {
+    @media (max-width: 900px) {
+        margin: 16px;
+    }
+
+    &--header {
+        color: #008522;
+        font-weight: 600;
+        margin: 16px 0;
+        text-align: right;
+    }
+}
